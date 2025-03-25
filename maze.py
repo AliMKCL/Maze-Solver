@@ -1,3 +1,6 @@
+#The path to the mazes might not be correct as I put them inside the folder mazes after finishing the project
+#It should work if you put the mazes in the same folder as the maze.py file
+
 def create_maze(width=5, height=5):
     maze = [["." for i in range(width*2+1)] for j in range(height*2+1)]
     for i in range(len(maze[0])):
@@ -15,7 +18,6 @@ def create_maze(width=5, height=5):
 
 
 def add_vertical_wall(maze, y_coordinate, vertical_line):
-    #maze[len(maze)-1-(vertical_line*2+1)][y_coordinate*2] = "#"
     maze[len(maze)-1-(y_coordinate*2+1)][vertical_line*2] = "#"
     return maze
 
